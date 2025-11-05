@@ -9,7 +9,17 @@ jobs:
   say_hello:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
       - name: Step 1
         run: echo "Hello, world from GitHub Actions!"
+
       - name: Step 2
         run: echo "This is step 2"
+
+      - name: Print files
+        run: ls -l
+
+      - name: Say Hello
+        run: echo "Workflow ran successfully!"
