@@ -22,7 +22,8 @@ jobs:
         run: ls -l
 
       - name: Print Branch Name
-        run: echo "Branch: ${{ github.ref }}"
+        run: |
+          echo "Branch: ${{ github.ref }}"
 
       - name: Say Hello
         run: echo "Workflow ran successfully!"
